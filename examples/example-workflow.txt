@@ -1,0 +1,47 @@
+Example Git Workflow
+====================
+
+This file demonstrates a typical workflow when working with Git.
+
+Step 1: Clone the repository
+-----------------------------
+git clone https://github.com/PPraveenKumar-klu/s22_gitdemo.git
+cd s22_gitdemo
+
+Step 2: Create a feature branch
+--------------------------------
+git checkout -b feature/my-new-feature
+
+Step 3: Make changes
+--------------------
+Edit files as needed using your favorite editor.
+
+Step 4: Stage your changes
+---------------------------
+git add .
+
+Step 5: Commit your changes
+----------------------------
+git commit -m "feat: Add new feature description"
+
+Step 6: Push to remote
+----------------------
+git push origin feature/my-new-feature
+
+Step 7: Create a Pull Request
+------------------------------
+Open GitHub and create a PR from your branch to main.
+
+Step 8: After merge, update local main
+---------------------------------------
+git checkout main
+git pull origin main
+git branch -d feature/my-new-feature
+
+Tips:
+-----
+- Always pull before starting new work
+- Commit frequently with clear messages
+- Keep branches focused on single features
+- Review your changes before committing
+- Communicate with team members

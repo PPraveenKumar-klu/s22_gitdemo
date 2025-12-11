@@ -1,0 +1,17 @@
+{
+  "project": {
+    "name": "Git Demo Project",
+    "version": "1.0.0",
+    "description": "A demonstration repository for learning Git"
+  },
+  "settings": {
+    "debug": false,
+    "logging": true,
+    "logLevel": "info"
+  },
+  "features": {
+    "authentication": true,
+    "notifications": true,
+    "darkMode": false
+  }
+}
