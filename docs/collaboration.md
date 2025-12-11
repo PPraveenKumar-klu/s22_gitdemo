@@ -91,7 +91,7 @@ git pull origin main
 
 # If conflicts occur, Git will mark them
 # Edit the conflicted files
-# Look for conflict markers: <<<<<<<, =======, >>>>>>>
+# Look for conflict markers: `<<<<<<<`, `=======`, `>>>>>>>`
 
 # After resolving
 git add conflicted-file.py
@@ -148,6 +148,32 @@ Closes #123
 - Each developer has their own fork
 - Changes submitted via pull requests
 - Common in open source
+
+## Merge vs Rebase
+
+### Merge
+Creates a merge commit that combines branches:
+```bash
+git checkout main
+git merge feature-branch
+```
+**Pros**: Preserves complete history, safe
+**Cons**: Can create complex history with many merge commits
+
+### Rebase
+Replays commits on top of another branch:
+```bash
+git checkout feature-branch
+git rebase main
+```
+**Pros**: Creates linear history, cleaner log
+**Cons**: Rewrites history, can cause issues if branch is shared
+
+### When to Use Each
+- **Merge**: For shared branches, when preserving history is important
+- **Rebase**: For local branches, to clean up history before merging
+
+**Important**: Never rebase commits that have been pushed to a shared branch!
 
 ## Tips for Successful Collaboration
 
